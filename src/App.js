@@ -67,13 +67,12 @@ class BooksApp extends React.Component {
     this.setState({ query: query })
   }
 
-
   render() {
     return (
       <div className="app">
         <Route path="/search" render={() => (
           <div className="search-books">
-            <div className="search-books-bar">
+            <div className="search-books-bar" onClick={() => this.searchQuery('')}>
               <Link 
                 to="/"
                 className="close-search" 
